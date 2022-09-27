@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\javafsd\testingdemos\TestNG-Demo\testng-v4.xml</span>
+                    <span>C:\javafsd\testingdemos\TestNG-Demo\testng-v6.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="loanapplications.HomeLoanApplicationTests" class="method navigator-link" hash-for-method="APIHomeLoan">APIHomeLoan</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="loanapplications.CarLoanApplicationTests" class="method navigator-link" hash-for-method="CarLoanLoginAPI">CarLoanLoginAPI</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="loanapplications.HomeLoanApplicationTests" class="method navigator-link" hash-for-method="HomeLoanLoginAPI">HomeLoanLoginAPI</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="loanapplications.HomeLoanApplicationTests" class="method navigator-link" hash-for-method="MobileHomeLoan">MobileHomeLoan</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -167,9 +172,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="HomeLoanLoginAPI">
-                  </a> <!-- HomeLoanLoginAPI -->
-                  <span class="method-name">HomeLoanLoginAPI</span>
+                  <a name="APIHomeLoan">
+                  </a> <!-- APIHomeLoan -->
+                  <span class="method-name">APIHomeLoan</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="MobileHomeLoan">
+                  </a> <!-- MobileHomeLoan -->
+                  <span class="method-name">MobileHomeLoan</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,7 +189,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\javafsd\testingdemos\TestNG-Demo\testng-v4.xml</span>
+            <span class="header-content">C:\javafsd\testingdemos\TestNG-Demo\testng-v6.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -188,8 +200,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;loanapplications.HomeLoanApplicationTests&quot;&gt;
         &lt;methods&gt;
-          &lt;exclude name=&quot;HomeLoanLoginWeb&quot;/&gt;
-          &lt;exclude name=&quot;HomeLoanLoginMobile&quot;/&gt;
+          &lt;exclude name=&quot;Web.*&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- loanapplications.HomeLoanApplicationTests --&gt;
     &lt;/classes&gt;
@@ -257,24 +268,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'HomeLoanLoginAPI')
+data.setCell(0, 1, 'APIHomeLoan')
 data.setCell(0, 2, 'loanapplications.HomeLoanApplicationTests')
-data.setCell(0, 3, 11);
+data.setCell(0, 3, 18);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'PersonalLoanLoginAPI')
-data.setCell(1, 2, 'loanapplications.PersonalLoanApplicationTests')
+data.setCell(1, 1, 'MobileHomeLoan')
+data.setCell(1, 2, 'loanapplications.HomeLoanApplicationTests')
 data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'CarLoanLoginAPI')
-data.setCell(2, 2, 'loanapplications.CarLoanApplicationTests')
+data.setCell(2, 1, 'PersonalLoanLoginAPI')
+data.setCell(2, 2, 'loanapplications.PersonalLoanApplicationTests')
 data.setCell(2, 3, 2);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'CarLoanLoginAPI')
+data.setCell(3, 2, 'loanapplications.CarLoanApplicationTests')
+data.setCell(3, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 ms</span>
+              <span class="suite-total-time">Total running time: 23 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -289,7 +304,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -313,9 +328,7 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">loanapplications.HomeLoanApplicationTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">HomeLoanLoginWeb</span>
-                <br/>
-                <span class="ignored-method-name">HomeLoanLoginMobile</span>
+                <span class="ignored-method-name">WebHomeLoan</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -329,22 +342,26 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">loanapplications.HomeLoanApplicationTests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">HomeLoanLoginAPI</span>
+                <span class="method-name">APIHomeLoan</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">MobileHomeLoan</span>
+                <span class="method-start">24 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">loanapplications.PersonalLoanApplicationTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">PersonalLoanLoginAPI</span>
-                <span class="method-start">158 ms</span>
+                <span class="method-start">280 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">loanapplications.CarLoanApplicationTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">CarLoanLoginAPI</span>
-                <span class="method-start">182 ms</span>
+                <span class="method-start">304 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
