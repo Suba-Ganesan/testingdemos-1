@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class PersonalLoanApplicationTests {
 
-	@Test
+	@Test(groups= {"Smoke"})
 	public void PersonalLoanLoginWeb() {
 		System.out.println("Personal loan application - web login test");
 	}

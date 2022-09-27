@@ -9,7 +9,7 @@ public class CarLoanApplicationTests {
 		System.out.println("Car loan application - web login test");
 	}
 	
-	@Test
+	@Test(groups= {"Smoke"})
 	public void CarLoanLoginMobile() {
 		System.out.println("Car loan application - mobile login test");
 	}
